@@ -1,0 +1,16 @@
+{
+    "name": "matias/php-tutorial",
+    "description": "A simle tutorial project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Matias\\PhpTutorial\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Matias"
+        }
+    ],
+    "require": {}
+}
