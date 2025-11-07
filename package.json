@@ -1,0 +1,29 @@
+{
+  "name": "php-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "php -S localhost:8000 -t public",
+    "watch": "wait-on http://localhost:8000 && browser-sync start --proxy \"localhost:8000\" --files \"public/**/*.php, public/**/*.css, public/**/*.js, inc/**/*.php\" --open; Start-Process 'http://localhost:3001'",
+    "build": "npx @tailwindcss/cli -i ./input.css -o ./public/css/main.css",
+    "tailwind:watch": "npx @tailwindcss/cli -i ./input.css -o ./public/css/main.css --watch",
+    "dev": "concurrently \"pnpm run serve\" \"pnpm run watch\" \"pnpm run tailwind:watch\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.24.0",
+    "browser-sync": "^3.0.4",
+    "concurrently": "^9.2.1",
+    "prettier": "^3.6.2",
+    "wait-on": "^9.0.1"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.16",
+    "tailwindcss": "^4.1.16"
+  }
+}
